@@ -6,7 +6,7 @@ import markdown
 st.set_page_config(page_title="Create blog post", page_icon="📝", layout="wide")
 
 st.title("Create blog post")
-st.markdown("This app is an interface where you can write articles about AI agents from the CodeGPT marketplace")
+st.markdown("This app is an interface where you can write articles about AI agents from CodeGPT")
 
 # Menú principal
 with st.sidebar:
