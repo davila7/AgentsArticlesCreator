@@ -1,6 +1,6 @@
 # CodeGPT Blog Post Generator
 
-This Streamlit application provides an interface to generate technical blog articles about AI agents available in the CodeGPT marketplace. It uses the CodeGPT API to fetch agent information and generate article content based on a detailed prompt.
+This Streamlit application provides an interface to generate technical blog articles about AI agents available in the CodeGPT. It uses the CodeGPT API to fetch agent information and generate article content based on a detailed prompt.
 
 ## Installation
 
@@ -47,7 +47,7 @@ To get this project up and running on your local machine, follow these steps:
     In the sidebar, enter your CodeGPT API Key and CodeGPT-Org-Id.
 
 4.  **Load and Select an Agent:**
-    Click the "Load agents from the marketplace" button. Once the agents are loaded, select an agent from the dropdown list.
+    Click the "Load agents" button. Once the agents are loaded, select an agent from the dropdown list.
 
 5.  **Create the Article:**
     Click the "Create article" button. The application will generate a blog post based on the selected agent.

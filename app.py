@@ -28,7 +28,7 @@ def get_agents():
         st.error(f"Error loading agents: {response.status_code}")
         return []
 
-if st.button("Load agents from the marketplace"):
+if st.button("Load agents"):
     agents = get_agents()
     if agents:
         st.session_state.agents = agents
@@ -72,7 +72,7 @@ Write a comprehensive, engaging, and well-structured article for developers abou
 
 5. Setting up and using the expert agent in VSCode:
    - Step-by-step guide to install the CodeGPT extension in Visual Studio Code
-   - How to access CodeGPT's agent marketplace and select the {agent_name} expert
+   - How to access CodeGPT's chat interface and select the {agent_name} expert
    - Instructions for opening the chat within VSCode to interact with the agent
    - Tips for effectively communicating with the agent in the VSCode environment
 
