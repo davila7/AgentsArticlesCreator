@@ -16,7 +16,7 @@ with st.sidebar:
 
 # List of agents
 def get_agents():
-    url = "https://api.codegpt.co/api/v1/agents/marketplace/all"
+    url = "https://api.codegpt.co/api/v1/agents"
     headers = {
         "Authorization": f"Bearer {codegpt_api_key}",
         "CodeGPT-Org-Id": codegpt_org_id
@@ -108,7 +108,7 @@ Aim for an article length of 1500-2000 words that provides comprehensive value t
 
     data = {
         "agentId": agent_id,
-        "stream": True,
+        "stream": False,
         "format": "text",
         "messages": [{
             "content": article_prompt,
@@ -120,7 +120,10 @@ Aim for an article length of 1500-2000 words that provides comprehensive value t
     if response.status_code == 200:
         return response.text
     else:
-        return f"Error generating article: {response.status_code}"
+        # show all response data
+        response = response.json()
+        # {'message': 'Agent with ID 5022f8af-bcf3-4a37-a33c-981f879d6c7b not found in organization with ID: 31352da0-1a51-4fce-890c-6a8c30277f94.'}
+        return f"Error generating article: {response['message']}"
 
 if st.button("Create article"):
     if 'selected_agent' in st.session_state and st.session_state.selected_agent:
